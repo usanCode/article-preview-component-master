@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link href="https://fonts.google.com/specimen/Manrope" rel="stylesheet"
+  > 
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center;  }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @import url("https://fonts.google.com/specimen/Manrope");
+    
+    body{
+      background-color:hsl(210, 46%, 95%) ;
+      
+    }
+    .center{
+      position:absolute;
+      margin-top:100px;
+      margin-left:125px;
+      width: 800px;
+      height:300px;
+      background-color:white; 
+
+    }
+    .pic{
+      position:absolute;
+      width: 35%;
+      height:100%;
+      
+      margin-top: 0;
+      margin-left: 0;
+      
+      
+    }
+    .texte{
+      position:absolute;
+      width: 60%;
+      height:100%;
+      margin-left: 250px;
+      left:50px;
+      font-display: justify;
+      font-size: 18px;
+      font-family:Manrope ;
+      color:hsl(214, 17%, 51%);
+    }
+    h4{
+      font-size: 20px;
+      color:hsl(217, 19%, 35%); 
+    }
+    .michelle{
+      position:absolute;
+      border-radius: 50%;
+      width:50px;
+      height: 50px;
+      
+    }
+    .identifiants{
+      position:absolute;
+      margin-top: 0px;
+      margin-left: 60px; 
+      
+    }
+    .partager {
+      position:absolute;
+      margin-left:475px;
+      margin-top:45px;
+      right:10px;
+      background-color:hsl(210, 46%, 95%);
+      width: 40px;
+      height:40px;
+      border-radius: 50%;
+      z-index: 1;
+      
+
+    }
+
+    .partager:active{
+      position:absolute;
+      margin-left:475px;
+      margin-top:45px;
+      right:10px;
+      background-color:hsl(217, 19%, 35%);
+      cursor: pointer;
+      width: 40px;
+      height:40px;
+      border-radius: 50%;
+      z-index: 1;
+
+    }
+    .secondPic{
+      position:absolute;
+      margin-left:12px;
+      margin-top:10px;
+      background-repeat: no-repeat;
+      z-index: 2;
+      
+    } 
+
+    .secondPic :active{
+      position:absolute;
+      margin-left:12px;
+      margin-top:10px;
+      background-repeat: no-repeat;
+      background: hsl(210, 46%, 95%);
+      background-clip: border-box;
+      cursor: pointer;
+      z-index: 2;
+      
+    }
+    
+    .nom{
+      font-weight: bolder;
+      color:hsl(217, 19%, 35%);
+    }
+
+    .liste{
+      position:absolute;
+      margin-left:420px;
+      margin-top:45px;
+      top:90px;
+      left:-80px;
+      padding-top:20px;
+      padding-right: 20px;
+      padding-left: 20px;
+      color:grey;
+      list-style: none;
+      display:flex;
+      justify-content: space-between;
+      width: 180px;
+      height:40px;
+      border-radius: 10px;
+      background-color:hsl(217, 19%, 35%);
+      text-transform: uppercase;
+
+    }
+    .triangle{
+      position:absolute;
+      margin-left: 430px;
+      margin-top: -10px;
+      width:40px;
+      height:40px;
+      background-color: hsl(217, 19%, 35%);
+      border-radius: 100% 0% 0% 0%;
+      transform:rotate(45deg);
+
+
+    }
+
+    
+.links :hover {
+  transform: scale(1.5);  
+  
+}
+
+.visible{
+  display: none;
+} 
+/*
+.visible:active{ 
+  display: block;
+
+}*/
+
+    @media screen and (max-width:414px) {
+      .center{
+      position:absolute;
+      margin-top: 80px;
+      margin-left: 30px;
+      
+      width: 350px;
+      height:450px;
+      background-color:white; 
+
+    }
+
+      .pic{
+      position:absolute;
+      width: 100%;
+      height:45%;
+     
+      
+    }
+    .texte{
+      position:absolute;
+      width: 97%;
+      height:55%;
+      margin-top: 180px;
+      margin-left: -40px;
+      font-display: justify;
+      font-size: 13px;
+      font-weight: 500;
+      font-family: Manrope;
+      color:hsl(214, 17%, 51%);
+    }
+
+    .partager {
+      position:absolute;
+      margin-left:445px;
+      margin-top:20px;
+      right:0px;
+      
+      background-color:yellow;
+      width: 35px;
+      height:35px;
+      border-radius: 50%;
+      z-index: 1;
+
+    }
+    .secondPic{
+      position:absolute;
+      margin-left:12px;
+      margin-top:-10px;
+      background-repeat: no-repeat;
+      z-index: 2;
+      
+    }
+    .liste{
+      position:absolute;
+      margin-left:70px;
+      margin-top:120px;
+      top:80px;
+      left:-80px;
+      padding-top:20px;
+      padding-bottom: 10px;
+      padding-right: -40px;
+      padding-left: 10px;
+      color:grey;
+      list-style: none;
+      display:flex;
+      justify-content: space-around;
+      width: 323px;
+      height:40px;
+      font-size: 25px;
+      border-radius: 10px;
+      background-color:hsl(217, 19%, 35%);
+      
+      text-transform: uppercase;
+
+    }
+    .triangle{
+      position:absolute;
+      visibility:hidden;
+      margin-left: 430px;
+      margin-top: -30px;
+      width:40px;
+      height:40px;
+      background-color: hsl(217, 19%, 35%);
+      border-radius: 100% 0% 0% 0%;
+      transform:rotate(45deg);
+
+    }
+    
+    }
+    
+    
+  
+  </style>
+</head>
+<body>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">UsanCode</a>.
+  </div>
+
+<div class="center">
+
+  <div><img class="pic"src="./images/drawers.jpg"></div>
+
+    <div class="texte">
+  <h4>Shift the overall look and feel by adding these wonderful 
+  touches to furniture in your home</h4> 
+
+  <p>Ever been in a room and felt like something was missing? Perhaps 
+  it felt slightly bare and uninviting. I’ve got some simple tips 
+  to help you make any room feel complete.</p>
+
+<img class="michelle" src="./images/avatar-michelle.jpg">
+
+<div class="identifiants">
+   <p class="nom">Michelle Appleton</p>
+   <p>28 Jun 2020</p>
+</div>
+
+<div class="visible">
+<div >
+    <ul class="liste">
+       <li> Share</li>
+       <li><a href="#" class="links"><img src="./images/icon-facebook.svg"></a></li>
+       <li><a href="#" class="links"><img src="./images/icon-twitter.svg"></a></li>
+       <li><a href="#" class="links"><img src="./images/icon-pinterest.svg"></a></li>   
+   </ul>
+</div>
+<div class="triangle"></div>
+
+</div>
+<div onClick="toggleMyList()"  class="partager" >
+  
+ <img class="secondPic" src="./images/icon-share.svg" id="share">
+ 
+    </div>
+ </div>
+</div>
+
+ 
+  <script>
+ 
+ 
+function toggleMyList() {
+    const myList = document.getElementsByClassName('.visible');
+    const displaySetting = myList.style.display;
+    const shareIcon = document.getElementsByClassName('.partager');
+    if (displaySetting == 'none') {
+      myList.style.display = 'block'; 
+    }
+    else {
+      myList.style.display = 'none';
+    }
+  } 
+</script> 
+  
+</body>
+</html>
